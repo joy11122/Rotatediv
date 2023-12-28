@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<title></title>
+<style type="text/css">
+.di{
+width:200px;
+height:200px;
+background-color:yellow;
+border-radius:100px;
+border-left:5px solid red;
+border-right:5px solid blue;
+border-top:5px solid green;
+border-bottom:5px solid orange;
+transition: transform 0.5s ease-in-out;
+animation:rotate 5s infinite linear;
+position:relative;
+}
+.di:hover {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+@keyframes rotate{
+0%{
+transform:rotate(0deg);
+background-color:red;
+}
+30%{transform:rotate(360deg);
+background-color:green;}
+60%{
+transform:rotate(0deg);
+background-color:blue;
+}
+100%{transform:rotate(360deg);
+background-color:crimson;}
+}
+.joy {
+  position: absolute;
+  color:white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Ensure the text is displayed above the rotating div */
+}
+img{
+border-radius:50%;
+position:absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index:1;
+}
+</style>
+</head>
+<body>
+
+
+<div class="di">
+<img src="https://picsum.photos/100/100">
+<div class="joy">Hi I'm  Joy</div>
+</div>
+
+</body>
+</html>
